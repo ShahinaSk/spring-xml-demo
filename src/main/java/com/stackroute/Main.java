@@ -1,5 +1,6 @@
 package com.stackroute;
 
+import com.stackroute.demo.BeanLifeCycleDemoBean;
 import com.stackroute.domain.Movie;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -11,8 +12,8 @@ public class Main
 
         //using ApplicationContext
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie=(Movie)applicationContext.getBean("movie");
-        System.out.println("Movie details: "+movie);
+        BeanLifeCycleDemoBean beanLifeCycleDemoBean=(BeanLifeCycleDemoBean) applicationContext.getBean("beanlifecycledemobean");
+        beanLifeCycleDemoBean.customDestroy();
 
     }
 }
