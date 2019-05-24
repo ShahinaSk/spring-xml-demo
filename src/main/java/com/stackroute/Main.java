@@ -13,5 +13,6 @@ public class Main
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
         Movie movie=(Movie)applicationContext.getBean("movie");
         System.out.println("Movie details: "+movie);
+
     }
 }
