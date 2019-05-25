@@ -5,29 +5,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-
-
-   <!-- <bean id="movie" class="com.stackroute.domain.Movie" autowire="byType">
-        <property name="movieId" value="25"></property>
-        <property name="movieName" value="Maharshi"></property>
-    </bean>
-
-    <bean name="actor" class="com.stackroute.domain.Actor">
-
-        <property name="name" value="Mahesh"></property>
-        <property name="gender" value="Male"></property>
-        <property name="age" value="40"></property>
-
-    </bean>
-
-    <bean name="actor" class="com.stackroute.domain.Actor">
-
-        <property name="name" value="Mahesh"></property>
-        <property name="gender" value="Male"></property>
-        <property name="age" value="40"></property>
-
-    </bean>-->
-
+    <bean id="applicationcontextawaredemo" class="com.stackroute.awareinterface.ApplicationContextAwareDemo"></bean>
+    <bean id="beanfactoryawaredemo" class="com.stackroute.awareinterface.BeanFactoryAwareDemo"></bean>
+    <bean id="beannameawaredemo" class="com.stackroute.awareinterface.BeanNameAwareDemo"></bean>
+    <bean id="resourceloaderawaredemo" class="com.stackroute.awareinterface.ResourceLoaderAwareDemo"></bean>
+    <bean id="beanpostprocessordemobean" class="com.stackroute.demo.BeanPostProcessorDemoBean" ></bean>
+    <bean id="beanlifecycledemobean" class="com.stackroute.demo.BeanLifeCycleDemoBean" init-method="customInit" destroy-method="customDestroy"></bean>
     <bean id="movie" class="com.stackroute.domain.Movie">
 
         <constructor-arg name="movieId" value="25"></constructor-arg>
